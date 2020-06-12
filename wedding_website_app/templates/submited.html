@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Shu-Hao & Peggy</title>
+    <style>
+      body {
+        background-color: #faf4f3;
+      }
+
+      .information {
+        background-color: white;
+        padding: 15px;
+        width: 50%;
+        margin: auto;
+        box-shadow: 2px 2px 5px lightgrey;
+        border-radius: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="information">
+      <h2>
+        We received your information! We look forward to seeing you on June
+        13th, 2020.
+      </h2>
+      <p>Redirecting to Home after <span id="countdown">5</span> seconds</p>
+      <!-- JavaScript part -->
+      <script type="text/javascript">
+        // Total seconds to wait
+        var seconds = 5;
+
+        function countdown() {
+          seconds = seconds - 1;
+          if (seconds < 0) {
+            // Chnage your redirection link here
+            window.location = "https://www.peggyandshuhao.com";
+          } else {
+            // Update remaining seconds
+            document.getElementById("countdown").innerHTML = seconds;
+            // Count down using javascript
+            window.setTimeout("countdown()", 1000);
+          }
+        }
+
+        countdown();
+      </script>
+    </div>
+  </body>
+</html>

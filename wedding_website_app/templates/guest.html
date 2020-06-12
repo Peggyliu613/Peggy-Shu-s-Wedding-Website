@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shu-Hao & Peggy</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    <style>
+        * {
+            background-color: #faf4f3;
+        }
+        input{
+            padding: 5px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Guest</h2>
+    {% if request.session.user != None %}
+    <a href="/logout" class="logout">LOG OUT</a>
+    {% endif %}
+
+    <div class="guest_list">
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Email</th>
+                <th width="30px"># of Guests</th>
+                <th>Diet Restriction</th>
+                <th>Diet Message</th>
+                <th>Message</th>
+                <th width="20px">Shu's Friend</th>
+                <th width="20px">Peggy's Friend</th>
+            </thead>
+
+            <body>
+                {% for guest in all_guests %}
+                <tr>
+                    <td>{{guest.full_name}}</td>
+                    <td>{{guest.email}}</td>
+                    <td>{{guest.number_of_guests}}</td>
+                    <td>{{guest.diet_restriction}}</td>
+                    <td>{{guest.diet_message}}</td>
+                    <td>{{guest.message}}</td>
+                    <td>{{guest.is_shu_friend_relative}}</td>
+                    <td>{{guest.is_peggy_friend_relative}}</td>
+                </tr>
+                {% endfor %}
+            </body>
+        </table>
+        <form class="delete" action="/erase_guest" method="POST">
+            {% csrf_token %}
+            <input type="text" name="delete">
+            <input type="submit" value="Delete">
+        </form>
+    </div>
+</body>
+
+</html>

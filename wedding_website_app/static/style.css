@@ -1,0 +1,339 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.header{
+    position: fixed;
+    z-index:1;
+    width: 100%;
+    min-height: 55px;
+    background-color: #faf4f3;
+}
+.header h3{
+    display: inline-block;
+    margin-left: 5%;
+    width:52%;
+    padding: 15px 0px;
+}
+.nav_bar{
+    display: inline-block;
+    width: 40%;
+    font-size: 15px;
+    vertical-align: center;
+}
+.nav_bar_sm{
+    display: none;
+}
+.nav_bar a{
+    text-decoration: none;
+    color: inherit;
+    margin-left: 3%;
+}
+.nav_bar_sm a{
+    text-decoration: none;
+    color: inherit;
+    margin-left: 3%;
+}
+.nav_bar a:hover{
+    font-weight: bold;
+}
+.main{
+    background-image: url("../static/images/we_are_married.jpg");
+    height: 800px;
+    position: relative;
+    top: 45px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main h1{
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    left: 20%;
+    color: white;
+    font-size:7vw;
+}
+h2{
+    margin: 50px;
+    text-align: center;
+}
+p{
+    margin-top: 30px;
+    text-align: center;
+}
+.google_map{
+    display: block;
+    margin: 40px auto;
+    padding-top: 20px;
+}
+.google_link{
+    color: brown;
+    margin-top: 30px;
+}
+#our_story{
+    background-color: #dfeff2;
+}
+#our_story p{
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: left;
+}
+#our_story img{
+    display: block;
+    margin: auto;
+    width: 500px;
+}
+#read_more, #read_more1, #read_more2{
+    display: none;
+}
+#read_more_botton{
+    margin-left: 10%;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px grey solid;
+    background-color: inherit;
+}
+#read_more_botton:hover{
+    font-weight: bold;
+}
+.photos{
+    text-align: center;
+    vertical-align: center;
+    width: 90%;
+    margin: auto;
+}
+#l_photo, #p_photo{
+    display: inline-block;
+    border: 3px solid white;
+    box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    overflow: hidden;
+}
+#l_photo img{
+    width: 267px;
+    height: 200px;
+    margin-left: -44px;
+}
+#p_photo img{
+    width: 200px;
+    height: 267px;
+    margin-top: -44px;
+}
+#l_photo:hover, #p_photo:hover{
+    box-shadow: 0px 0px 8px rgba(0,0,0,.8);
+}
+.rsvp{
+    background-color: #ffffe6;
+    text-align: center;
+}
+.rsvp_main{
+    margin-left: 10%;
+    width: 80%;
+}
+.rsvp_form input[type=text]{
+    padding: 5px;
+    font-size: 20px;
+    width: 20%;
+    border: 1px grey solid;
+}
+.rsvp_form input[type=submit]{
+    font-size: 20px;
+    padding: 5px;
+    border: 1px grey solid;
+    background-color: #ffffe6;
+}
+.rsvp_form li{
+    margin-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+select{
+    padding: 5px;
+    font-size: 15px;
+    width: 10%;
+    text-align-last: center;
+}
+textarea{
+    width: 30%;
+    height: 100px;
+    vertical-align: top;
+    padding: 5px;
+    font-size: 15px;
+    border: 1px grey solid;
+}
+
+.overlay{
+    background-color: rgba(0, 0, 0, 0.9);
+    width:100vw;
+    height:100vh;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+    display:flex;
+    justify-content:space-around;
+    position:fixed;
+    z-index:50;
+}
+
+.hidden{
+    display:none;
+}
+
+.close-button {
+    width:50px;
+    height:50px;
+    position:absolute;
+    top:10px;
+    right:10px;
+    background-color:transparent;
+    z-index:75;
+    border-color:white;
+    border-radius:5px;
+    color:white;
+    text-shadow: 1px 1px 5px black;
+
+}
+
+.close-button:hover {
+    background-color:white;
+    color:black;
+    transition: background-color 0.5s ease-in-out;
+}
+.logout{
+    display: block;
+    text-align:center;
+}
+.guest_list{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+.guest_list table, th, td{
+    background-color: white;
+    padding: 10px;
+    border: 1px grey solid;
+    border-collapse: collapse;
+}
+.guest_list table{
+    height: 30px;
+    width:100%;
+}
+
+.delete{
+    margin-top: 20px;
+    font-size: 20px;
+}
+.delete input{
+    background-color: white;
+}
+
+@media only screen and (max-width: 550px){
+    h2{
+        font-size: 25px;
+    }
+    .header h3{
+        font-size: 30px;
+        width: 80%;
+    }
+    p{
+        font-size: 15px;
+    }
+    .nav_bar{
+        display: none;
+    }
+    .nav_bar_sm{
+        display: inline-block;
+        width: 40%;
+        font-size: 15px;
+        vertical-align: center;
+    }
+    .main{
+        height: 1000px;
+    }
+    .main h1{
+        top: 52%;
+    }
+    .rsvp_form li{
+        margin-top: 10px;
+        font-size: 13px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .rsvp_form input[type=text]{
+        font-size: 15px;
+    }
+    select{
+        font-size: 15px;
+    }
+    .google_map{
+        display: none;
+    }
+    #l_photo, #p_photo{
+        display: inline-block;
+        border: 3px solid white;
+        box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+    }
+    #l_photo img{
+        width: 200px;
+        height: 150px;
+        margin-left: -44px;
+    }
+    #p_photo img{
+        width: 150px;
+        height: 200px;
+        margin-top: -44px;
+    }
+    #our_story img{
+        display: none;
+    }
+}
+@media only screen and (min-width: 551px) and (max-width: 1000px){
+    .header h3{
+        font-size: 30px;
+        width: 80%;
+    }
+    p{
+        font-size: 15px;
+    }
+    .nav_bar{
+        display: none;
+    }
+    .nav_bar_sm{
+        display: inline-block;
+        width: 10%;
+        font-size: 25px;
+        vertical-align: right;
+    }
+    .main{
+        height: 1300px;
+    }
+    .main h1{
+        top: 52%;
+    }
+    .rsvp_form li{
+        margin-top: 10px;
+        font-size: 13px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .rsvp_form input[type=text]{
+        font-size: 15px;
+    }
+    select{
+        font-size: 15px;
+    }
+    .google_link{
+        display: none;
+    }
+    
+}
+@media only screen and (min-width: 1001){
+    .google_link{
+        display: none;
+    }
+}
